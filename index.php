@@ -36,7 +36,7 @@ $cities = [
     </thead>
     <tbody>
     <?php ksort($cities, false); foreach($cities as $city => $information):?>
-        <?php ksort($information, SORT_NUMERIC); foreach($information as $state => $persons): $total_person += $persons;?>
+        <?php foreach($information as $state => $persons): $total_person += $persons;?>
             <tr class="table-active">
                 <th><?= $city ?></th>
                 <td><?= (($state == null)? "-" :  $state); ?></td>
